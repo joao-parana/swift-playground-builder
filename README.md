@@ -18,6 +18,14 @@ playground('./Example.md', /* options */, /* optional callback */);
 * `allowsReset` - A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`. Default: `true`
 * `platform` - Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks. Default: 'osx'
 
+## Markdown Format
+
+Swift code is extracted from the Markdown with the same syntax used to specify languages for code blocks in GitHub-flavored Markdown:
+
+    ```swift
+    println("Hello, world!")
+    ```
+
 
 ## TODO
 
