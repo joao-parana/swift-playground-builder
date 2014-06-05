@@ -1,0 +1,16 @@
+{
+  "name": "swift-playground",
+  "version": "0.1.0",
+  "description": "Create Xcode Playgrounds for the Swift programming language with rich documentation generated from Markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "0.9.1",
+    "marked": "0.3.2",
+    "xml": "0.0.12"
+  }
+}
