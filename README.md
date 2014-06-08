@@ -4,33 +4,102 @@
 
 ![Playground example](screenshot.png)
 
-## Usage
+## Markdown Format
+
+Swift code is extracted from the Markdown with the same syntax used to specify languages for code blocks in GitHub-flavored Markdown. All other text is parsed normally as Markdown using [marked](https://github.com/chjj/marked).
+
+    # A Swift Tour
+
+    Tradition suggests that the first program in a new language should print the words "Hello, world" on the screen. In Swift, this can be done in a single line:
+
+    ```swift
+    println("Hello, world!")
+    ```
+
+## Install
+
+1. This tool requires [Node.js](http://nodejs.org), so you will need to have that installed. Download the installer from the Node.js website and follow the instructions.
+
+2. In your Terminal, run the following command to install the Playground Builder:
+
+   ```sh
+   $ npm install -g swift-playground-builder
+   ```
+
+3. That's it! You should now be able to use the `playground` command.
+
+## Command-line Usage
+
+```sh
+
+Usage: playground <paths>... [options]
+
+paths     Markdown files(s), or directory containing Markdown files,
+          from which to build the Playground(s)
+
+Options:
+
+   -d, --destination   Directory in which to output the Playground(s)
+
+   -p, --platform      Specifies which platform's frameworks can be imported
+                       in the Playground(s); only one platform can be choosen
+                       [options: ios, osx] [default: osx]
+
+   -n, --noreset       Don't allow edited code to be reset from the
+                       "Editor → Reset Playground" menu in Xcode
+
+   -v, --version       Print swift-playground-builder version and exit
+
+```
+
+## Node.js Usage
+
+You can also import the Playground Builder as a module.
 
 ```js
-var playground = require('swift-playground');
-
-// Create "Example.playground" in the same directory
-playground('./Example.md', /* options */, /* optional callback */);
+var buildPlayground = require('swift-playground-builder');
 ```
+
+### Arguments
+
+* `paths` (`String` or `Array`, required) - Path to Markdown file or directory containg Markdown files. An array of file and/or directory paths is also acceptable.
+* `outputDirectory` (`String`, optional) - Path to directory in which to output the built Playground(s). If not specified, the value of `process.cwd()` is used by default.
+* `options` (`Object`, optional) - See the "Options" section below for available options.
+* `callback` (`Function`, optional) - Function to be called once all Playground files have been output. First argument is `err` which contains an `Error`, if any.
 
 ### Options
 
 * `allowsReset` - A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`. Default: `true`
 * `platform` - Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks. Default: 'osx'
 
-## Markdown Format
 
-Swift code is extracted from the Markdown with the same syntax used to specify languages for code blocks in GitHub-flavored Markdown:
+### Example
 
-    ```swift
-    println("Hello, world!")
-    ```
+```js
+var buildPlayground = require('swift-playground-builder');
 
+// outputs `Introduction.playground` to CWD
+buildPlayground('Introduction.md');
+
+// outputs `Variables.playground` to `/User/json/Playgrounds`
+buildPlayground('Variables.md', '/User/jason/Playgrounds');
+
+// outputs `Constants.playground` and `Closures.playground` to CWD
+buildPlayground(['Constants.md', 'Closures.md'], {
+  allowsReset: false,
+  platform: 'ios'
+});
+
+// outputs playgrounds for Markdown files in `./playgrounds` directory,
+// then invokes callback function
+buildPlayground(['./playgrounds'], function(err) {
+  if (err) { throw err; }
+  console.log('Done building playgrounds!');
+});
+```
 
 ## TODO
 
-* Command-line tool
-* Better documentation and examples
 * Improved default stylesheet
 * Ability to pass custom stylesheet
 * Tests
