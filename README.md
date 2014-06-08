@@ -108,6 +108,14 @@ buildPlayground(['./playgrounds'], function(err) {
 });
 ```
 
+## Why Node.js?
+
+You may be wondering why I chose to use Node.js for this project.
+
+I wrote this script with the intention of using it as part of a web-based CMS. It would be awesome to have downloadable playgrounds when I post Swift-related articles on my website, and a huge time-saver if they are generated automatically from the post's Markdown. Although this version already works very well from the Terminal, I'd love to one day rewrite it in Swift itself.
+
+If the fact that this is written in JavaScript is unappealing to you, I ask that you please give it a chance. Node is very easy to install — especially on OS X!  — and the Playground Builder is used just like any other command-line tool.
+
 ## License
 
 The MIT License
