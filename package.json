@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Create Xcode Playgrounds for the Swift programming language with rich documentation generated from Markdown",
   "main": "index.js",
+  "bin": {
+    "playground" : "lib/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
