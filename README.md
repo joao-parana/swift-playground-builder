@@ -39,7 +39,8 @@ paths     Markdown files(s), or directory containing Markdown files,
 
 Options:
 
-   -d, --destination   Directory in which to output the Playground(s)
+   -d, --destination   Directory in which to output the Playground(s);
+                       defaults to the current working directory
 
    -p, --platform      Specifies which platform's frameworks can be imported
                        in the Playground(s); only one platform can be choosen
