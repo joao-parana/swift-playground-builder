@@ -4,6 +4,17 @@
 
 ![Playground example](screenshot.png)
 
+#### Contents
+* [Markdown Format](README.md#markdown-format)
+* [Installation](README.md#installation)
+* [Command-line Usage](README.md#command-line-usage)
+* [Node.js Usage](README.md#nodejs-usage)
+  * [Arguments](README.md#arguments)
+  * [Options](README.md#options)
+  * [Example](README.md#example)
+* [Why Node.js?](README.md#why-nodejs)
+* [License](README.md#license)
+
 ## Markdown Format
 
 Swift code is extracted from the Markdown with the same syntax used to specify languages for code blocks in GitHub-flavored Markdown. All other text is parsed normally as Markdown using [marked](https://github.com/chjj/marked).
@@ -17,7 +28,7 @@ Swift code is extracted from the Markdown with the same syntax used to specify l
     println("Hello, world!")
     ```
 
-## Install
+## Installation
 
 1. This tool requires [Node.js](http://nodejs.org). Download the installer from the Node.js website and follow the instructions.
 
