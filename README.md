@@ -10,7 +10,8 @@ Swift code is extracted from the Markdown with the same syntax used to specify l
 
     # A Swift Tour
 
-    Tradition suggests that the first program in a new language should print the words "Hello, world" on the screen. In Swift, this can be done in a single line:
+    Tradition suggests that the first program in a new language should print the words "Hello, world"
+    on the screen. In Swift, this can be done in a single line:
 
     ```swift
     println("Hello, world!")
@@ -18,7 +19,7 @@ Swift code is extracted from the Markdown with the same syntax used to specify l
 
 ## Install
 
-1. This tool requires [Node.js](http://nodejs.org), so you will need to have that installed. Download the installer from the Node.js website and follow the instructions.
+1. This tool requires [Node.js](http://nodejs.org). Download the installer from the Node.js website and follow the instructions.
 
 2. In your Terminal, run the following command to install the Playground Builder:
 
@@ -30,8 +31,7 @@ Swift code is extracted from the Markdown with the same syntax used to specify l
 
 ## Command-line Usage
 
-```sh
-
+```
 Usage: playground <paths>... [options]
 
 paths     Markdown files(s), or directory containing Markdown files,
@@ -49,12 +49,11 @@ Options:
                        "Editor → Reset Playground" menu in Xcode
 
    -v, --version       Print swift-playground-builder version and exit
-
 ```
 
 ## Node.js Usage
 
-You can also import the Playground Builder as a module.
+You can also import the Playground Builder as a Node.js module.
 
 ```js
 var buildPlayground = require('swift-playground-builder');
@@ -62,15 +61,25 @@ var buildPlayground = require('swift-playground-builder');
 
 ### Arguments
 
-* `paths` (`String` or `Array`, required) - Path to Markdown file or directory containg Markdown files. An array of file and/or directory paths is also acceptable.
-* `outputDirectory` (`String`, optional) - Path to directory in which to output the built Playground(s). If not specified, the value of `process.cwd()` is used by default.
-* `options` (`Object`, optional) - See the "Options" section below for available options.
-* `callback` (`Function`, optional) - Function to be called once all Playground files have been output. First argument is `err` which contains an `Error`, if any.
+* `paths` (`String` or `Array`, required)
+  Path to Markdown file or directory containg Markdown files. An array of file and/or directory paths is also acceptable.
+
+* `outputDirectory` (`String`, optional)
+  Path to directory in which to output the built Playground(s). If not specified, the value of `process.cwd()` is used by default.
+
+* `options` (`Object`, optional)
+  See the "Options" section below for available options.
+
+* `callback` (`Function`, optional)
+  Function to be called once all Playground files have been output. First argument is `err` which contains an `Error`, if any.
 
 ### Options
 
-* `allowsReset` - A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`. Default: `true`
-* `platform` - Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks. Default: 'osx'
+* `allowsReset` (default: `true`)
+  A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`.`
+
+* `platform` (default: `osx`)
+  Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks.
 
 
 ### Example
