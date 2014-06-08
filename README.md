@@ -73,24 +73,24 @@ var buildPlayground = require('swift-playground-builder');
 
 ### Arguments
 
-* `paths` (`String` or `Array`, required)
+* **`paths` (`String` or `Array`, required)**
   Path to Markdown file or directory containg Markdown files. An array of file and/or directory paths is also acceptable.
 
-* `outputDirectory` (`String`, optional)
+* **`outputDirectory` (`String`, optional)**
   Path to directory in which to output the built Playground(s). If not specified, the value of `process.cwd()` is used by default.
 
-* `options` (`Object`, optional)
+* **`options` (`Object`, optional)**
   See the "Options" section below for available options.
 
-* `callback` (`Function`, optional)
+* **`callback` (`Function`, optional)**
   Function to be called once all Playground files have been output. First argument is `err` which contains an `Error`, if any.
 
 ### Options
 
-* `allowsReset` (default: `true`)
+* **`allowsReset` (default: `true`)**
   A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`.`
 
-* `platform` (default: `osx`)
+* **`platform` (default: `osx`)**
   Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks.
 
 
