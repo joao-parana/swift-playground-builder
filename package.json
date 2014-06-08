@@ -9,6 +9,7 @@
   "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "0.9.0",
     "fs-extra": "0.9.1",
     "marked": "0.3.2",
     "xml": "0.0.12"
