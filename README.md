@@ -2,6 +2,8 @@
 
 > Create Xcode Playgrounds for the Swift programming language with rich documentation generated from Markdown
 
+Follow me on Twitter [@jasonsandmeyer](http://twitter.com/jasonsandmeyer) or watch this repo for updates!
+
 ![Playground example](screenshot.png)
 
 #### Contents
