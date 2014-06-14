@@ -1,3 +1,5 @@
+/* global suite, beforeEach, afterEach, test, assert */
+
 var fs = require('fs');
 var path = require('path');
 var temp = require('temp');
@@ -22,7 +24,7 @@ function assertDirectoryContents(actual, expected) {
 
   var actualFiles = walkSync(actual);
   var expectedFiles = walkSync(expected).filter(function(file) {
-    return file.indexOf('.DS_Store') === -1 // ignore pesky .DS_Store
+    return file.indexOf('.DS_Store') === -1; // ignore pesky .DS_Store
   });
 
   assert.deepEqual(actualFiles, expectedFiles, 'file structure');
