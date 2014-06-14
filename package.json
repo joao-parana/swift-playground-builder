@@ -10,8 +10,20 @@
     "test": "istanbul test node_modules/mocha/bin/_mocha && npm run lint",
     "lint": "jshint . --reporter node_modules/jshint-stylish/stylish.js"
   },
-  "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
+  "author": "Jason Sandmeyer <jasandmeyer@icloud.com> (http://jasonsandmeyer.com)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jas/swift-playground-builder.git"
+  },
+  "bugs":  "http://github.com/jas/swift-playground-builder/issues",
   "license": "MIT",
+  "keywords": [
+    "swift",
+    "xcode",
+    "playground",
+    "markdown",
+    "documentation"
+  ],
   "dependencies": {
     "async": "0.9.0",
     "fs-extra": "0.9.1",
