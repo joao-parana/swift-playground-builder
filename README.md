@@ -1,4 +1,4 @@
-# Swift Playground Builder
+# Swift Playground Builder [![Build Status](https://travis-ci.org/jas/swift-playground-builder.svg?branch=master)](https://travis-ci.org/jas/swift-playground-builder)
 
 > Create Xcode Playgrounds for the Swift programming language with rich documentation generated from Markdown
 
