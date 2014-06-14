@@ -31,7 +31,7 @@ function assertDirectoryContents(actual, expected) {
 
   actualFiles.forEach(function(filePath) {
     if (filePath.charAt(filePath.length - 1) !== '/') {
-      var expectedContents = fs.readFileSync(path.join(actual, filePath)).toString();
+      var expectedContents = fs.readFileSync(path.join(expected, filePath)).toString();
       assert.fileContent(path.join(actual, filePath), expectedContents, 'content of ' + filePath);
     }
   });
@@ -109,7 +109,7 @@ test('createFromFiles, given a directory', function(done) {
 });
 
 test('"platform" and "allowsReset" options', function(done) {
-  playground.createFromFile(path.join(FIXTURES_DIR, 'Test.md'), {
+  playground.createFromFile(path.join(FIXTURES_DIR, 'iOS.md'), {
     outputDirectory: OUTPUT_DIR,
     platform: 'ios',
     allowsReset: false
