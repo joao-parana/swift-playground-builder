@@ -7,7 +7,7 @@
     "playground": "lib/cli.js"
   },
   "scripts": {
-    "test": "istanbul test node_modules/mocha/bin/_mocha",
+    "test": "istanbul test node_modules/mocha/bin/_mocha && npm run lint",
     "lint": "jshint . --reporter node_modules/jshint-stylish/stylish.js"
   },
   "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
