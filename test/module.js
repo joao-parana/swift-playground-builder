@@ -119,3 +119,14 @@ test('"platform" and "allowsReset" options', function(done) {
     done();
   });
 });
+
+test('"stylesheet" option', function(done) {
+  playground.createFromFile(path.join(FIXTURES_DIR, 'Stylesheet.md'), {
+    outputDirectory: OUTPUT_DIR,
+    stylesheet: path.join(FIXTURES_DIR, 'custom.css')
+  }, function(err) {
+    if (err) { return done(err); }
+    assertDirectoryContents(path.join(OUTPUT_DIR, 'Stylesheet.playground'), 'Stylesheet.playground');
+    done();
+  });
+});

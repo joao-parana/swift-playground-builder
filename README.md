@@ -62,6 +62,8 @@ Options:
    -n, --noreset       Don't allow edited code to be reset from the
                        "Editor → Reset Playground" menu in Xcode
 
+   -s, --stylesheet    Path to custom stylesheet
+
    -v, --version       Print swift-playground-builder version and exit
 ```
 
@@ -103,6 +105,9 @@ playground.createFromString('String containing markdown.', options);
 
 * **`platform` (default: `'osx'`)**
   Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks.
+
+* **`stylesheet`**
+  Path to a custom stylesheet.
 
 
 ### Example
