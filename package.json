@@ -7,7 +7,8 @@
     "playground": "lib/cli.js"
   },
   "scripts": {
-    "test": "istanbul test node_modules/mocha/bin/_mocha"
+    "test": "istanbul test node_modules/mocha/bin/_mocha",
+    "lint": "jshint . --reporter node_modules/jshint-stylish/stylish.js"
   },
   "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
   "license": "MIT",
@@ -22,6 +23,8 @@
     "chai": "^1.9.1",
     "chai-fs": "0.0.3",
     "istanbul": "0.2.11",
+    "jshint": "^2.5.1",
+    "jshint-stylish": "0.2.0",
     "mocha": "^1.20.1",
     "rimraf": "^2.2.8",
     "temp": "^0.8.0",
