@@ -70,16 +70,18 @@ Options:
 You can also import the Playground Builder as a Node.js module.
 
 ```js
-var buildPlayground = require('swift-playground-builder');
+var playground = require('swift-playground-builder');
+
+playground.createFromFile('file.md', options);
+playground.createFromFiles(['file.md', 'directory/of/files/'], options);
+playground.createFromString('String containing markdown.', options);
 ```
 
 ### Arguments
 
-* **`paths` (`String` or `Array`, required)**
-  Path to Markdown file or directory containg Markdown files. An array of file and/or directory paths is also acceptable.
-
-* **`outputDirectory` (`String`, optional)**
-  Path to directory in which to output the built Playground(s). If not specified, the value of `process.cwd()` is used by default.
+* **`paths` (`String` or `Array`)** or **`markdown` (`String`)**
+  * `createFromFile` and `createFromFiles` expect a path to a Markdown file or directory containing Markdown files. An array of file and/or directory paths is also acceptable.
+  * `createFromString` expects a string containing Markdown.
 
 * **`options` (`Object`, optional)**
   See the "Options" section below for available options.
@@ -89,33 +91,43 @@ var buildPlayground = require('swift-playground-builder');
 
 ### Options
 
+* **`name` (default: `'MyPlayground'`)**
+  When using `createFromString`, specify a name for the playground. The name will be used for
+  the filename. (The `.playground` extension is appended automatically.)
+
+* **`outputDirectory` (default: `process.cwd()`)**
+  Path to directory in which to output the built Playground(s).
+
 * **`allowsReset` (default: `true`)**
   A Playground's code can be modified and saved. The Playground can be reset to its original code from the "Editor → Reset Playground" menu. This menu can be disabled for a Playground by setting this option to `false`.`
 
-* **`platform` (default: `osx`)**
+* **`platform` (default: `'osx'`)**
   Set the platform to `osx` or `ios` to be able to import each platform's respective frameworks.
 
 
 ### Example
 
 ```js
-var buildPlayground = require('swift-playground-builder');
+var playground = require('swift-playground-builder');
 
-// outputs `Introduction.playground` to CWD
-buildPlayground('Introduction.md');
+// Outputs `Introduction.playground` to current working directory
+playground.createFromFile('Introduction.md');
 
-// outputs `Variables.playground` to `/User/json/Playgrounds`
-buildPlayground('Variables.md', '/User/jason/Playgrounds');
+// Outputs `Variables.playground` to `/User/Jason/Playgrounds`
+playground.createFromString(markdown, {
+  name: 'Variables',
+  outputDirectory: '/User/Jason/Playgrounds'
+});
 
 // outputs `Constants.playground` and `Closures.playground` to CWD
-buildPlayground(['Constants.md', 'Closures.md'], {
+playground.createFromFiles(['Constants.md', 'Closures.md'], {
   allowsReset: false,
   platform: 'ios'
 });
 
 // outputs playgrounds for Markdown files in `./playgrounds` directory,
 // then invokes callback function
-buildPlayground(['./playgrounds'], function(err) {
+playground.createFromFiles('./playgrounds', function(err) {
   if (err) { throw err; }
   console.log('Done building playgrounds!');
 });
