@@ -4,10 +4,10 @@
   "description": "Create Xcode Playgrounds for the Swift programming language with rich documentation generated from Markdown",
   "main": "index.js",
   "bin": {
-    "playground" : "lib/cli.js"
+    "playground": "lib/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul test node_modules/mocha/bin/_mocha"
   },
   "author": "Jason Sandmeyer <jasandmeyer@icloud.com>",
   "license": "MIT",
@@ -17,5 +17,14 @@
     "marked": "0.3.2",
     "nomnom": "^1.7.0",
     "xml": "0.0.12"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "chai-fs": "0.0.3",
+    "istanbul": "0.2.11",
+    "mocha": "^1.20.1",
+    "rimraf": "^2.2.8",
+    "temp": "^0.8.0",
+    "walk-sync": "^0.1.2"
   }
 }
