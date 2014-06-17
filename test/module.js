@@ -130,3 +130,13 @@ test('"stylesheet" option', function(done) {
     done();
   });
 });
+
+test('Kramdown-style code blocks', function(done) {
+  playground.createFromFile(path.join(FIXTURES_DIR, 'Kramdown.md'), {
+    outputDirectory: OUTPUT_DIR
+  }, function(err) {
+    if (err) { return done(err); }
+    assertDirectoryContents(path.join(OUTPUT_DIR, 'Kramdown.playground'), 'Kramdown.playground');
+    done();
+  });
+});
