@@ -8,3 +8,7 @@ println("Hello, world!")
 ```
 
 Additional content...
+
+```
+Another code block
+```
