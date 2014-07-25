@@ -29,6 +29,7 @@
     "fs-extra": "0.9.1",
     "marked": "0.3.2",
     "nomnom": "^1.7.0",
+    "update-notifier": "0.2.0",
     "xml": "0.0.12"
   },
   "devDependencies": {
