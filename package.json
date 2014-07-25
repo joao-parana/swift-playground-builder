@@ -15,7 +15,7 @@
     "type": "git",
     "url": "http://github.com/jas/swift-playground-builder.git"
   },
-  "bugs":  "http://github.com/jas/swift-playground-builder/issues",
+  "bugs": "http://github.com/jas/swift-playground-builder/issues",
   "license": "MIT",
   "keywords": [
     "swift",
