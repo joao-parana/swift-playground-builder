@@ -140,3 +140,13 @@ test('Kramdown-style code blocks', function(done) {
     done();
   });
 });
+
+test('reference-style links and images', function(done) {
+  playground.createFromFile(path.join(FIXTURES_DIR, 'References.md'), {
+    outputDirectory: OUTPUT_DIR
+  }, function(err) {
+    if (err) { return done(err); }
+    assertDirectoryContents(path.join(OUTPUT_DIR, 'References.playground'), 'References.playground');
+    done();
+  });
+});
