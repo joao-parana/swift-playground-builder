@@ -48,7 +48,10 @@ Swift code is extracted from the Markdown with the same syntax used to specify l
 Usage: playground <paths>... [options]
 
 paths     Markdown files(s), or directory containing Markdown files,
-          from which to build the Playground(s)
+          from which to build the Playground(s).
+          
+          The Markdown file(s) must have one of these common Markdown
+          file extensions: .md .markdown .mdown .mkdn .mkd
 
 Options:
 
