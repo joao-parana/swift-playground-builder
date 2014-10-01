@@ -25,4 +25,4 @@ UIColor.greenColor() + UIColor.blueColor()
 UIColor.purpleColor() + UIColor.orangeColor()
 ```
 
-[Source](https://gist.github.com/jas/d26de56c47d320567b19)
+[Source](https://github.com/joao-parana/swift-playground-builder/blob/master/test/fixtures/iOS.md)
