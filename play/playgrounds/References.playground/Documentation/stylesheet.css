@@ -14,11 +14,3 @@ section {
   padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
 }
-
-a[href^="https://gist.github.com"]  {
-  /*
-    HIDE anchor with  href="https://gist.github.com
-  */
-  display: none;
-}
-

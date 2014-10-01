@@ -1,8 +1,3 @@
-# UIColorBlender
-
-Use Swift operator overloading to blend two UIColors with the addition operator:
-
-```swift
 import UIKit
 
 func + (left: UIColor, right: UIColor) -> UIColor {
@@ -23,6 +18,3 @@ func + (left: UIColor, right: UIColor) -> UIColor {
 UIColor.yellowColor() + UIColor.redColor()
 UIColor.greenColor() + UIColor.blueColor()
 UIColor.purpleColor() + UIColor.orangeColor()
-```
-
-[Source](https://gist.github.com/jas/d26de56c47d320567b19)
